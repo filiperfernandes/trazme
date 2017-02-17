@@ -24,6 +24,9 @@ shell-server@0.2.1            # Server-side component of the `meteor shell` comm
 accounts-ui@1.1.9
 accounts-password@1.3.3
 
+accounts-base
+useraccounts:unstyled
+
 kadira:flow-router
 kadira:blaze-layout
 erasaur:meteor-lodash
