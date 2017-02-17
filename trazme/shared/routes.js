@@ -5,10 +5,16 @@ FlowRouter.route('/',{
 	}
 });
 
-
 FlowRouter.route('/index',{
 	name: 'index',
 	action(){
 		BlazeLayout.render('index');
+	}
+});
+
+FlowRouter.route('/dev',{
+	name: 'dev',
+	action(){
+		BlazeLayout.render('dev');
 	}
 });
