@@ -19,6 +19,27 @@ FlowRouter.route('/user',{
 	}
 });
 
+FlowRouter.route('/listing/order',{
+	name: 'order',
+	action(){
+		BlazeLayout.render('order');
+	}
+});
+
+FlowRouter.route('/listing/trip',{
+	name: 'trip',
+	action(){
+		BlazeLayout.render('trip');
+	}
+});
+
+FlowRouter.route('/listing/',{
+	name: 'listing',
+	action(){
+		BlazeLayout.render('listing');
+	}
+});
+
 //Testing Area
 
 FlowRouter.route('/dev',{
