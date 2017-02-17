@@ -20,14 +20,11 @@ TransactionSchema = new SimpleSchema({
 	date: {
 		type: Date,
 		label: "date",
-		autoValue: function() {
-			return new Date()
-		}
 	},
 
 	user1: {
 		type: String,
-		label: "user1"
+		label: "user1",
 	},
 
 	user2: {
