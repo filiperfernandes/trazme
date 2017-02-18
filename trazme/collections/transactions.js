@@ -52,9 +52,8 @@ TransactionSchema = new SimpleSchema({
 	state: {
 		type: String,
 		label: "state",
-		autoValue: function() {
-			return stateopen
-		},
+
+		//TEM DE SER CONFIRMADAS AS MERDAS PARA INSERIR TRANSACOES NOVAS
 	},
 
 	info: {

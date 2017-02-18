@@ -54,11 +54,45 @@ FlowRouter.route('/exchange/:id',{
 	}
 });
 
+FlowRouter.route('/user/:id',{
+	name: 'user',
+	action(){
+		BlazeLayout.render('user',{main: 'pendingRequests'}); //Alterar Aqui
+	}
+});
+
+FlowRouter.route('/chat/:id',{
+	name: 'chat',
+	action(){
+		BlazeLayout.render('chat');
+	}
+});
+
+FlowRouter.route('/login',{
+	name: 'login',
+	action(){
+		let u = Meteor.userId();
+		if ( u )
+			FlowRouter.redirect('/user/'+u);
+		else
+		{
+			BlazeLayout.render('login');
+		}	
+	}
+});
+
 //Testing Area
 
 FlowRouter.route('/dev',{
 	name: 'dev',
 	action(){
 		BlazeLayout.render('dev');
+	}
+});
+
+FlowRouter.route('/devb',{
+	name: 'devb',
+	action(){
+		BlazeLayout.render('devb');
 	}
 });

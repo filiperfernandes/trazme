@@ -1,0 +1,46 @@
+<template name="chat">
+	
+	{{> navbar}}
+
+	<div class="row m-0">
+		<div class="col-md-12 col-xs-12 splash-us p-3 background-screen" id="back0" >
+			<table style="height: 100%; width: 100%;" >
+				<tbody>
+					<tr>
+						<td class="align-middle text-center">
+							<h2 class="cw m-0">Encomendas</h2>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	{{#if isOpen}}
+
+		<div class="row mx-0 my-3">
+			<div class="col-md-10 offset-md-1">
+				{{>SimpleChatWindow roomId=getId username=username limit=limit}}
+			</div>
+		</div>
+
+		<div class="row mx-0 my-3">
+			<div class="col-md-5 offset-md-1">
+				<button type="button" class="btn btn-danger btn-block btn-close">Cancelar</button>
+			</div>
+			<div class="col-md-5">
+				{{#if checkOwner}}
+					<button type="button" class="btn btn-success btn-block btn-close">Confirmar</button>
+				{{else}}
+					<button type="button" class="btn btn-success disabled btn-block">Confirmar</button>
+				{{/if}}
+			</div>
+		</div>	
+
+	{{else}}
+
+		<p> Chat terminado </p>
+
+	{{/if}}
+
+</template>
