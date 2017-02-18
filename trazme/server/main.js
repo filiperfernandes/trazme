@@ -7,18 +7,15 @@ Meteor.startup(() => {
 
 Meteor.methods({
 
-	'transactions.insert'(type, orderId, userA, userB, state){
+	'transactions.insert'(type, orderId, userA, state){
 
-		var info = ""; 
+		var info = "grsvfxc"; 
 
 		Transactions.insert({
 	      type: type,
 	      orderId: orderId,
 	      userA: userA,
-	      userB: userB,
-	      state: state,
 	      info: info,
-	      createdAt: new Date() // current time
 	    });
 	}
 });

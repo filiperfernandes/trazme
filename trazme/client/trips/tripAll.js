@@ -6,6 +6,7 @@ Template.tripAll.onCreated(function() {
 
 	self.autorun(function(){
 		self.subscribe('trip');
+		self.subscribe('transactions');
 		Session.set("selOrigin","");
 		Session.set("selDestination","");
 	});
@@ -52,9 +53,18 @@ Template.tripAll.events({
 	"click .destReset": function(e, t){
 		Session.set("selDestination","");
 	},
-	"click #subs": function(e, t){
-		console.log(e.target);
-		//Transaction.insert({type:"A",orderId:"sdv"});
+	"click .createTransaction": function(e, t){
+		let orderId = e.target.getAttribute("id") ;
+		Meteor.call('transactions.insert', "asdasd",orderId, "sdrfv", "LOL", function(err,response) {
+			if(err) {
+				//Session.set('serverDataResponse', "Error:" + err.reason);
+				//return;
+				console.log(err);
+			}
+			//Session.set('serverDataResponse', response);
+		});
+
+		//let id = Transactions.insert("",orderId, "sdrfv", "egfdgfd", "LOL");
 	},
 
 });

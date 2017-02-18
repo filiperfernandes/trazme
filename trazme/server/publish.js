@@ -7,3 +7,7 @@ Meteor.publish('trip', function(){
 Meteor.publish('item', function(){
 	return Item.find();
 });
+
+Meteor.publish('transactions', function(){
+	return Transactions.find();
+});
