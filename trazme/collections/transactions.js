@@ -1,61 +1,123 @@
-Transactions = new Meteor.Collection('transactions');
+// import { Meteor } from 'meteor/meteor'
 
-TransactionSchema = new SimpleSchema({
+// Transactions = new Mongo.Collection('transactions');
 
-	type: {
-		type: String,
-		label: "type"
-	},
+// Transactions.allow({
+// 	insert: function(){
+// 		return true;
+// 	}
+// });
 
-	origin: {
-		type: String,
-		label: "origin"
-	},
+// var stateopen = 'open';
 
-	destination: {
-		type: String,
-		label: "destination"
-	},
+// TransactionSchema = new SimpleSchema({
 
-	date: {
-		type: Date,
-		label: "date",
-	},
+// 	type: {
+// 		type: String,
+// 		label: "type"
+// 	},
 
-	user1: {
-		type: String,
-		label: "user1",
-	},
+// 	origin: {
+// 		type: String,
+// 		label: "origin"
+// 	},
 
-	user2: {
-		type: String,
-		label: "user2"
-	},
+// 	destination: {
+// 		type: String,
+// 		label: "destination"
+// 	},
 
-	state: {
-		type: String,
-		label: "state"
-	},
+// 	createdAt: {
+// 		type: Date,
+// 		label: "date",
+// 		autoValue: function() {
+// 			return new Date();
+// 		},
+// 		autoform: {
+// 			type: "hidden"
+// 		}
+// 	},
 
-	merchandiseType: {
-		type: String,
-		label: "merchandiseType"
-	},
+// 	DateOfShipping: {
+// 		type: String,
+// 		label: "Data de viagem",
+// 	},	
 
-	additionalInfo: {
-		type: String,
-		label: "additionalInfo"
-	},
+// 	driver: {
+// 		type: String,
+// 		label: "Driver",
+// 		autoValue: function() {
+// 			return this.userId
+// 		},
+// 		autoform: {
+// 			type: "hidden"
+// 		}
+// 	},
 
-	price: {
-		type: Number,
-		label: "price"
-	},
+// 	sender: {
+// 		type: String,
+// 		label: "Sender",
+// 		autoform: {
+// 		 	type: "hidden"
+// 		},
+// 		optional: true,
+// 	},
 
-	bail: {
-		type: String,
-		label: "bail"
-	},
-});
+// 	state: {
+// 		type: String,
+// 		label: "state",
+// 		autoValue: function() {
+// 			return stateopen
+// 		},
+// 		autoform: {
+// 			type: "hidden"
+// 		}
+// 	},
 
-Transactions.attachSchema(TransactionSchema);
+// 	merchandiseType: {
+// 		type: String,
+// 		label: "merchandiseType",
+// 		autoform: {
+// 			type: "hidden"
+// 		},
+// 		optional: true,
+// 	},
+
+// 	additionalInfo: {
+// 		type: String,
+// 		label: "additionalInfo",
+// 		optional: true,
+// 		autoform: {
+// 			type: "hidden"
+// 		},
+// 	},
+
+// 	price: {
+// 		type: Number,
+// 		label: "price",
+// 		optional: true,
+// 		autoform: {
+// 			type: "hidden"
+// 		},
+// 	},
+
+// 	bail: {
+// 		type: String,
+// 		label: "bail",
+// 		optional: true,
+// 		autoform: {
+// 			type: "hidden"
+// 		},
+// 	},
+
+// 	proposals: {
+// 		type: [String],
+// 		label: "Propostas",
+// 		optional: true,
+// 		autoform: {
+// 			type: "hidden"
+// 		},
+// 	},	
+// });
+
+// Transactions.attachSchema(TransactionSchema);

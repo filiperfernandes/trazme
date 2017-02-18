@@ -19,26 +19,34 @@ FlowRouter.route('/user',{
 	}
 });
 
-FlowRouter.route('/listing/order',{
-	name: 'order',
+FlowRouter.route('/trip/all',{
+	name: 'tripAll',
 	action(){
-		BlazeLayout.render('order');
+		BlazeLayout.render('tripAll');
 	}
 });
 
-FlowRouter.route('/listing/trip',{
-	name: 'trip',
+FlowRouter.route('/trip/add',{
+	name: 'tripAdd',
 	action(){
-		BlazeLayout.render('trip');
+		BlazeLayout.render('tripAdd');
 	}
 });
 
-FlowRouter.route('/listing/',{
-	name: 'listing',
+FlowRouter.route('/item/all',{
+	name: 'itemAll',
 	action(){
-		BlazeLayout.render('listing');
+		BlazeLayout.render('itemAll');
 	}
 });
+
+FlowRouter.route('/item/add',{
+	name: 'itemAdd',
+	action(){
+		BlazeLayout.render('itemAdd');
+	}
+});
+
 
 //Testing Area
 

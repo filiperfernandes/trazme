@@ -1,5 +1,18 @@
 <template name="trip">
 
-{{> quickForm collection="Transactions" id="insertTransactionsForm" type="insert"}}
+<h1>Please log in!</h1>
+
+<p>
+{{> atForm}}
+</p>
+
+
+{{#if currentUser }}
+  
+  	You're logged in!
+
+
+{{/if}}
+
 
 </template>
