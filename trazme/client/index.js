@@ -41,10 +41,35 @@ Template.navbar.events({
 
 "click #navbarSignIn": function(){
 	/* FALTA POR A PAGINA DE SING IN*/
-	FlowRouter.go('/');
+	FlowRouter.go('/signin');
     $('html, body').animate({
     }, 0); 
   },
 
 });
+
+Template.user.events({
+
+	"click #userHistory": function(){
+
+	FlowRouter.go('/signin');
+    $('html, body').animate({
+    }, 0); 
+  },
+
+  	"click #userOfersMade": function(){
+	FlowRouter.go('/signin');
+    $('html, body').animate({
+    }, 0); 
+
+    "click #userSendMessage": function(){
+	FlowRouter.go('/signin');
+    $('html, body').animate({
+    }, 0); 
+  },
+  },
+
+
+});
+
 
