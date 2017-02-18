@@ -1,3 +1,83 @@
 <template name="tripAll">
-4
+
+	{{> navbar}}
+
+	<div class="row m-0">
+		<div class="col-md-12 col-xs-12 splash-us p-3 background-screen" id="back0" >
+			<table style="height: 100%; width: 100%;" >
+				<tbody>
+					<tr>
+						<td class="align-middle text-center">
+							<h2 class="cw m-0">Viagens</h2>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<div class="row mx-0 my-3 text-center">
+		<div class="col-md-3 offset-md-3">
+			<div class="dropdown">
+				<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				Origem: {{selOr}}
+				</button>
+				<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+					<a class="dropdown-item orReset">Ver Todos</a>
+					<div class="dropdown-divider"></div>
+					{{#each allOrigins}}
+						<a class="dropdown-item selOrigin">{{this}}</a>
+					{{/each}}
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="dropdown">
+				<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				Destino: {{selDest}}
+				</button>
+				<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+					<a class="dropdown-item destReset">Ver Todos</a>
+					<div class="dropdown-divider"></div>
+					{{#each allDestinations}}
+						<a class="dropdown-item selDestination" href="#">{{this}}</a>
+					{{/each}}
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row mx-0 my-3">
+		<div class="col-md-10 offset-md-1 col-xs-12">
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th>Utilizador</th>
+						<th>Origem</th>
+						<th>Destino</th>
+						<th>Data</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					{{#if allTrips.count}}
+						{{#each allTrips}}
+						<tr>
+							<th scope="row">{{user}}</th>
+							<td>{{origin}}</td>
+							<td>{{destination}}</td>
+							<td>{{data}}</td>
+							<td>Falar com este cona</td>
+						</tr>
+						{{/each}}
+					{{else}}
+						<tr>
+							<td colspan="5" class="text-center">Não há viagens de {{selOr}} para {{selDest}}</td>
+						</tr>
+					{{/if}}
+				</tbody>
+			</table>
+		</div>
+	</div>
+
 </template>

@@ -10,3 +10,8 @@ html
 {
 	color: white ;
 }
+
+a
+{
+	cursor: pointer ;
+}
