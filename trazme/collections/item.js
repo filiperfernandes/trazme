@@ -2,12 +2,24 @@ import { Meteor } from 'meteor/meteor'
 
 Item = new Mongo.Collection('Item');
 
+Item.allow({
+	insert: function(){
+		return true;
+	}
+});
+
 ItemSchema = new SimpleSchema({
 
 
 	user: {
 		type: AccountsTemplates,
 		label: "User",
+		autoform: {
+			type: "hidden"
+		},
+		autoValue: function() {
+			return this.userId;
+		},
 	},
 
 	origin: {

@@ -2,12 +2,26 @@ import { Meteor } from 'meteor/meteor'
 
 Trip = new Mongo.Collection('trip');
 
+Trip.allow({
+	insert: function(){
+		return true;
+	}
+});
+
+
+
 TripSchema = new SimpleSchema({
 
 
 	user: {
 		type: AccountsTemplates,
 		label: "User",
+		autoform: {
+			type: "hidden"
+		},
+		autoValue: function() {
+			return this.userId;
+		},
 	},
 
 	origin: {

@@ -1,5 +1,9 @@
-// import { Meteor } from 'meteor/meteor'
+import { Meteor } from 'meteor/meteor'
 
-// Meteor.publish('transactions', function(){
-// 	return Transactions.find();
-// });
+Meteor.publish('trip', function(){
+	return Trip.find();
+});
+
+Meteor.publish('item', function(){
+	return Item.find();
+});
