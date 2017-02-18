@@ -1,70 +1,69 @@
-// import { Meteor } from 'meteor/meteor'
+import { Meteor } from 'meteor/meteor'
 
-// Transactions = new Mongo.Collection('transactions');
+Transactions = new Mongo.Collection('transactions');
 
-// Transactions.allow({
-// 	insert: function(){
-// 		return true;
-// 	}
-// });
+Transactions.allow({
+	insert: function(){
+		return true;
+	}
+});
 
-// var stateopen = 'open';
+var stateopen = 'open';
 
-// TransactionSchema = new SimpleSchema({
+TransactionSchema = new SimpleSchema({
 
-// 	type: {
-// 		type: String,
-// 		label: "type"
-// 	},
+	type: {
+		type: String,
+		label: "type"
+	},
 
-// 	id {
-// 		type: String,
-// 		label: "id"
-// 	},
+	orderId: {
+		type: String,
+		label: "orderId"
+	},
 
-// 	userA: {
-// 		type: String,
-// 		label: "userA"
-// 	},
+	userA: {
+		type: String,
+		label: "userA"
+	},
 
-// 	userB: {
-// 		type: String,
-// 		label: "userB"
-// 		autoValue: function() {
-// 			return this.userId
-// 		},
-// 		autoform: {
-// 			type: "hidden"
-// 		}
-// 	},
-// 	},
+	userB: {
+		type: String,
+		label: "userB",
+		autoValue: function() {
+			return this.userId
+		},
+		autoform: {
+			type: "hidden"
+		}
+	},
 
-// 	createdAt: {
-// 		type: Date,
-// 		label: "date",
-// 		autoValue: function() {
-// 			return new Date();
-// 		},
-// 		autoform: {
-// 			type: "hidden"
-// 		}
-// 	},		
+	createdAt: {
+		type: Date,
+		label: "date",
+		autoValue: function() {
+			return new Date();
+		},
+		autoform: {
+			type: "hidden"
+		}
+	},		
 
-// 	state: {
-// 		type: String,
-// 		label: "state",
-// 		autoValue: function() {
-// 			return stateopen
-// 		},
-// 		autoform: {
-// 			type: "hidden"
-// 		}
-// 	},
+	state: {
+		type: String,
+		label: "state",
+		autoValue: function() {
+			return stateopen
+		},
+		autoform: {
+			type: "hidden"
+		}
+	},
 
-// 	info: {
-// 		type: String,
-// 		label: "information"
-// 	},
-// });
+	info: {
+		type: String,
+		label: "information"
+	},
+});
 
-// Transactions.attachSchema(TransactionSchema);
+Transactions.attachSchema(TransactionSchema);

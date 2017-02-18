@@ -11,12 +11,64 @@
 		</div>
 	</div>
 
-	<div class="row m-0">
-		<div class="col-md-6 col-xs-12 splash-col" style="background-color: yellow">
-			<p>1</p>
+	<div class="row mx-0 my-3">
+		<div class="col-md-6 col-xs-12 splash-col" >
+			<p>Viagens</p>
+			<table class="table table-striped my-3 mx-0 text-center">
+				<thead>
+					<tr>
+						<th class="text-center">Origem</th>
+						<th class="text-center">Destino</th>
+						<th class="text-center">Data</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					{{#if shortTrips.count}}
+						{{#each shortTrips}}
+						<tr>
+							<td>{{origin}}</td>
+							<td>{{destination}}</td>
+							<td>{{data}}</td>
+							<td>Falar com este cona</td>
+						</tr>
+						{{/each}}
+					{{else}}
+						<tr>
+							<td colspan="4" class="text-center">Não há viagens disponíveis</td>
+						</tr>
+					{{/if}}
+				</tbody>
+			</table>
 		</div>
-		<div class="col-md-6 col-xs-12 splash-col" style="background-color: red">
-			<p>2</p>
+		<div class="col-md-6 col-xs-12 splash-col">
+			<p>Viagens</p>
+			<table class="table table-striped my-3 mx-0 text-center">
+				<thead>
+					<tr>
+						<th class="text-center">Origem</th>
+						<th class="text-center">Destino</th>
+						<th class="text-center">Data</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					{{#if shortItems.count}}
+						{{#each shortItems}}
+						<tr>
+							<td>{{origin}}</td>
+							<td>{{destination}}</td>
+							<td>{{data}}</td>
+							<td>Falar com este cona</td>
+						</tr>
+						{{/each}}
+					{{else}}
+						<tr>
+							<td colspan="4" class="text-center">Não há encomendas disponíveis</td>
+						</tr>
+					{{/if}}
+				</tbody>
+			</table>
 		</div>
 	</div>
 

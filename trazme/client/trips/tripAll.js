@@ -52,6 +52,11 @@ Template.tripAll.events({
 	"click .destReset": function(e, t){
 		Session.set("selDestination","");
 	},
+	"click #subs": function(e, t){
+		console.log(e.target);
+		//Transaction.insert({type:"A",orderId:"sdv"});
+	},
+
 });
 
 
