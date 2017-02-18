@@ -1,5 +1,13 @@
+.tweakOptions {
+  color: #292b2c !important;
+}
+
+.tweakOptions:hover {
+  color: #ffffff !important;
+}
+
 .hvr-fade {
-  display: inline-block;
+ 
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
@@ -11,6 +19,7 @@
   transition-property: color, background-color;
 }
 .hvr-fade:hover, .hvr-fade:focus, .hvr-fade:active {
-  background-color: #000000;
-  color: white;
+  background-color: #af0c0c !important;
+  color: white !important;
+  cursor: pointer;
 }
