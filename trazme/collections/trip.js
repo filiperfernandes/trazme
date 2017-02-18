@@ -8,6 +8,7 @@ Trip.allow({
 	}
 });
 
+var cities = ['Lisboa', 'Porto', 'Coimbra', "Alcanena"];
 
 
 TripSchema = new SimpleSchema({
@@ -26,12 +27,14 @@ TripSchema = new SimpleSchema({
 
 	origin: {
 		type: String,
-		label: "origin",
+		label: "Origem",
+		allowedValues: cities,
 	},
 
 	destination: {
 		type: String,
-		label: "destination",
+		label: "Destino",
+		allowedValues: cities,
 	},
 
 	data: {
@@ -52,3 +55,4 @@ TripSchema = new SimpleSchema({
 });
 
 Trip.attachSchema(TripSchema);
+

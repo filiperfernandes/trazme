@@ -8,6 +8,8 @@ Item.allow({
 	}
 });
 
+var cities = ['Lisboa', 'Porto', 'Coimbra', "Alcanena"];
+
 ItemSchema = new SimpleSchema({
 
 
@@ -25,11 +27,13 @@ ItemSchema = new SimpleSchema({
 	origin: {
 		type: String,
 		label: "origin",
+		allowedValues: cities,
 	},
 
 	destination: {
 		type: String,
 		label: "destination",
+		allowedValues: cities,
 	},
 
 	data: {
