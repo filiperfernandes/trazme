@@ -17,14 +17,26 @@
 // 		label: "type"
 // 	},
 
-// 	origin: {
+// 	id {
 // 		type: String,
-// 		label: "origin"
+// 		label: "id"
 // 	},
 
-// 	destination: {
+// 	userA: {
 // 		type: String,
-// 		label: "destination"
+// 		label: "userA"
+// 	},
+
+// 	userB: {
+// 		type: String,
+// 		label: "userB"
+// 		autoValue: function() {
+// 			return this.userId
+// 		},
+// 		autoform: {
+// 			type: "hidden"
+// 		}
+// 	},
 // 	},
 
 // 	createdAt: {
@@ -36,32 +48,7 @@
 // 		autoform: {
 // 			type: "hidden"
 // 		}
-// 	},
-
-// 	DateOfShipping: {
-// 		type: String,
-// 		label: "Data de viagem",
-// 	},	
-
-// 	driver: {
-// 		type: String,
-// 		label: "Driver",
-// 		autoValue: function() {
-// 			return this.userId
-// 		},
-// 		autoform: {
-// 			type: "hidden"
-// 		}
-// 	},
-
-// 	sender: {
-// 		type: String,
-// 		label: "Sender",
-// 		autoform: {
-// 		 	type: "hidden"
-// 		},
-// 		optional: true,
-// 	},
+// 	},		
 
 // 	state: {
 // 		type: String,
@@ -74,50 +61,10 @@
 // 		}
 // 	},
 
-// 	merchandiseType: {
+// 	info: {
 // 		type: String,
-// 		label: "merchandiseType",
-// 		autoform: {
-// 			type: "hidden"
-// 		},
-// 		optional: true,
+// 		label: "information"
 // 	},
-
-// 	additionalInfo: {
-// 		type: String,
-// 		label: "additionalInfo",
-// 		optional: true,
-// 		autoform: {
-// 			type: "hidden"
-// 		},
-// 	},
-
-// 	price: {
-// 		type: Number,
-// 		label: "price",
-// 		optional: true,
-// 		autoform: {
-// 			type: "hidden"
-// 		},
-// 	},
-
-// 	bail: {
-// 		type: String,
-// 		label: "bail",
-// 		optional: true,
-// 		autoform: {
-// 			type: "hidden"
-// 		},
-// 	},
-
-// 	proposals: {
-// 		type: [String],
-// 		label: "Propostas",
-// 		optional: true,
-// 		autoform: {
-// 			type: "hidden"
-// 		},
-// 	},	
 // });
 
 // Transactions.attachSchema(TransactionSchema);
