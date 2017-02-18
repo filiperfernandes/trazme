@@ -18,11 +18,11 @@
     width: 100% ;
 }
 
-.splash-lg
+.splash-us
 {
     position: relative;
     display: inline ;
-    height: 30vh;
+    height: 15vh;
     width: 100% ;
 }
 
@@ -50,11 +50,4 @@
     height: auto;
     width: 100% ;
     opacity: 0.5 ;
-}
-
-/* Text colors */
-
-.cw
-{
-	color: white ;
 }
