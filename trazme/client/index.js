@@ -61,12 +61,12 @@ Template.user.events({
 	FlowRouter.go('/signin');
     $('html, body').animate({
     }, 0); 
+    },
 
     "click #userSendMessage": function(){
 	FlowRouter.go('/signin');
     $('html, body').animate({
     }, 0); 
-  },
   },
 
 
