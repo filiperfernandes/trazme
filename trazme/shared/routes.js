@@ -61,6 +61,13 @@ FlowRouter.route('/user/:id',{
 	}
 });
 
+FlowRouter.route('/chat/:id',{
+	name: 'chat',
+	action(){
+		BlazeLayout.render('chat');
+	}
+});
+
 FlowRouter.route('/login',{
 	name: 'login',
 	action(){
