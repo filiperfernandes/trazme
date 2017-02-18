@@ -57,14 +57,11 @@ Template.tripAll.events({
 		let orderId = e.target.getAttribute("id") ;
 		Meteor.call('transactions.insert', "asdasd",orderId, "sdrfv", "LOL", function(err,response) {
 			if(err) {
-				//Session.set('serverDataResponse', "Error:" + err.reason);
-				//return;
 				console.log(err);
+				return;
 			}
-			//Session.set('serverDataResponse', response);
+			Session.set('latestTransaction', response);
 		});
-
-		//let id = Transactions.insert("",orderId, "sdrfv", "egfdgfd", "LOL");
 	},
 
 });

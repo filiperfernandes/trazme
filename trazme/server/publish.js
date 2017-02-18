@@ -11,3 +11,7 @@ Meteor.publish('item', function(){
 Meteor.publish('transactions', function(){
 	return Transactions.find();
 });
+
+Meteor.publish('transactions.single', function(id){
+	return Transactions.find({_id:id});
+});

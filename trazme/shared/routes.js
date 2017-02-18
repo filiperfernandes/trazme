@@ -47,6 +47,12 @@ FlowRouter.route('/item/add',{
 	}
 });
 
+FlowRouter.route('/exchange/:id',{
+	name: 'exchange',
+	action(){
+		BlazeLayout.render('exchange');
+	}
+});
 
 //Testing Area
 

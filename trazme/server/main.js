@@ -11,7 +11,7 @@ Meteor.methods({
 
 		var info = "grsvfxc"; 
 
-		Transactions.insert({
+		return Transactions.insert({
 	      type: type,
 	      orderId: orderId,
 	      userA: userA,

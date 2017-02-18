@@ -1,0 +1,40 @@
+<template name="exchange">
+
+	{{> navbar}}
+
+	<div class="row m-0">
+		<div class="col-md-12 col-xs-12 splash-us p-3 background-screen" id="back0" >
+			<table style="height: 100%; width: 100%;" >
+				<tbody>
+					<tr>
+						<td class="align-middle text-center">
+							<h2 class="cw m-0">Transação</h2>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	{{#if Template.subscriptionsReady }}
+
+		<div class="row mx-0 my-3">
+			<div class="col-md-10 offset-md-1 col-xs-12">
+				{{#autoForm collection="Transactions" id=singleId doc=single type="readonly"}}
+					<fieldset>
+						<legend>Add a Book</legend>
+						{{> afQuickField name='state'}}
+					</fieldset>
+				{{/autoForm}}
+				{{#autoForm collection="Transactions" id=singleId doc=single type="update"}}
+					<fieldset>
+						{{> afQuickField name='info'}}
+					</fieldset>
+					<button type="submit" class="btn btn-primary submitExchange">Insert</button>
+				{{/autoForm}}
+			</div>
+		</div>
+
+	{{/if}}
+
+</template>

@@ -5,6 +5,9 @@ Transactions = new Mongo.Collection('transactions');
 Transactions.allow({
 	insert: function(){
 		return true;
+	},
+	update: function(){
+		return true;
 	}
 });
 
@@ -33,9 +36,6 @@ TransactionSchema = new SimpleSchema({
 		autoValue: function() {
 			return this.userId
 		},
-		autoform: {
-			type: "hidden"
-		}
 	},
 
 	createdAt: {
@@ -55,9 +55,6 @@ TransactionSchema = new SimpleSchema({
 		autoValue: function() {
 			return stateopen
 		},
-		autoform: {
-			type: "hidden"
-		}
 	},
 
 	info: {
