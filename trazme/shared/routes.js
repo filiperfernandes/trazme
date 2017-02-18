@@ -82,3 +82,10 @@ FlowRouter.route('/dev',{
 		BlazeLayout.render('dev');
 	}
 });
+
+FlowRouter.route('/devb',{
+	name: 'devb',
+	action(){
+		BlazeLayout.render('devb');
+	}
+});
