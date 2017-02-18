@@ -45,9 +45,17 @@ nav.navbar-findcond li :hover {}
 }
 .hvr-shutter-out-horizontal:hover, .hvr-shutter-out-horizontal:focus, .hvr-shutter-out-horizontal:active {
   color: #af0c0c;
-  background: #af0c0c ;
-}
+  background: #af0c0c;
+
+  }
 .hvr-shutter-out-horizontal:hover:before, .hvr-shutter-out-horizontal:focus:before, .hvr-shutter-out-horizontal:active:before {
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
+
+}
+
+
+/* JACOB  ISTO È O CURSOR OVER LOGO*/
+.cursorOverLogo{
+  cursor: pointer;
 }
