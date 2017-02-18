@@ -55,16 +55,22 @@ FlowRouter.route('/exchange/:id',{
 });
 
 FlowRouter.route('/user/:id',{
-	name: 'exchange',
+	name: 'user',
 	action(){
-		BlazeLayout.render('user',{main: 'pending'}); //Alterar Aqui
+		BlazeLayout.render('user',{main: 'pendingRequests'}); //Alterar Aqui
 	}
 });
 
 FlowRouter.route('/login',{
 	name: 'login',
 	action(){
-		BlazeLayout.render('login');
+		let u = Meteor.userId();
+		if ( u )
+			FlowRouter.redirect('/user/'+u);
+		else
+		{
+			BlazeLayout.render('login');
+		}	
 	}
 });
 

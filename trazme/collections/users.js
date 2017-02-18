@@ -59,3 +59,9 @@ AccountsTemplates.addFields([
     }
   },
 ]);
+
+AccountsTemplates.configure({
+  onSubmitHook: function(){
+    FlowRouter.reload()
+  },
+});

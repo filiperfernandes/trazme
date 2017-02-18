@@ -18,6 +18,14 @@
     width: 100% ;
 }
 
+.splash-lg
+{
+    position: relative;
+    display: inline ;
+    height: 100vh;
+    width: 100% ;
+}
+
 .splash-us
 {
     position: relative;

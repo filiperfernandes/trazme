@@ -45,7 +45,57 @@
 
 </template>
 
-<template name="pending">
+<template name="pendingRequests">
+
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>Tipo</th>
+				<th>User A</th>
+				<th>user B</th>
+				<th>Estado</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{#each allRequests}}
+				<tr>
+					<th scope="row">{{type}}</th>
+					<td>{{userA}}</td>
+					<td>{{userB}}</td>
+					<td>{{state}}</td>
+				</tr>
+			{{/each}}
+		</tbody>
+	</table>
+
+</template>
+
+<template name="pendingOffers">
+
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>Tipo</th>
+				<th>User A</th>
+				<th>user B</th>
+				<th>Estado</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{#each allRequests}}
+				<tr>
+					<th scope="row">{{type}}</th>
+					<td>{{userA}}</td>
+					<td>{{userB}}</td>
+					<td>{{state}}</td>
+				</tr>
+			{{/each}}
+		</tbody>
+	</table>
+
+</template>
+
+<template name="finishedTrips">
 
 	<table class="table table-striped">
 		<thead>
