@@ -54,6 +54,20 @@ FlowRouter.route('/exchange/:id',{
 	}
 });
 
+FlowRouter.route('/user/:id',{
+	name: 'exchange',
+	action(){
+		BlazeLayout.render('user',{main: 'pending'}); //Alterar Aqui
+	}
+});
+
+FlowRouter.route('/login',{
+	name: 'login',
+	action(){
+		BlazeLayout.render('login');
+	}
+});
+
 //Testing Area
 
 FlowRouter.route('/dev',{

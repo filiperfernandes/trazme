@@ -1,3 +1,5 @@
+import 'bootstrap';
+
 Template.index.onCreated(function() {
 	var self = this;
 
