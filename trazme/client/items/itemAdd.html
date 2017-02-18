@@ -1,4 +1,25 @@
 <template name="itemAdd">
 
-	{{> quickForm collection="Item" id="insertItemForm" type="insert"}}
+	{{> navbar}}
+
+	<div class="row m-0">
+		<div class="col-md-12 col-xs-12 splash-us p-3 background-screen" id="back0" >
+			<table style="height: 100%; width: 100%;" >
+				<tbody>
+					<tr>
+						<td class="align-middle text-center">
+							<h2 class="cw m-0">Encomendas</h2>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<div class="row mx-0 my-3">
+		<div class="col-md-10 offset-md-1 col-xs-12">
+			{{> quickForm collection="Item" id="insertItemForm" type="insert"}}
+		</div>
+	</div>
+
 </template>
