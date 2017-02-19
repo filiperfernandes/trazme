@@ -8,8 +8,8 @@
 				<tbody>
 					<tr>
 						<td class="align-middle text-center">
-							<h2 class="cw m-0">Frederico Madeira</h2>
-							<p class="cw m-0">@FMader</p>
+							<h2 class="cw m-0">{{currentName}}</h2>
+							<p class="cw m-0">{{currentUsername}}</p>
 						</td>
 					</tr>
 				</tbody>
@@ -31,7 +31,7 @@
 			</div>
 			<hr>
 			<div class="list-group">
-				<p id="userOfersMade" class="list-group-item list-group-item-action tweakOptions hvr-fade">Ofertas Feitas ( se user )</p>
+				<p id="userOffersMade" class="list-group-item list-group-item-action tweakOptions hvr-fade">Ofertas Feitas ( se user )</p>
 				<p  id="userHistory" class="list-group-item list-group-item-action tweakOptions hvr-fade">Histórico de Viagens</p>
 				<p id="userSendMessage" class="list-group-item list-group-item-action tweakOptions hvr-fade">Enviar Mensagem</p>
 			</div>
@@ -63,6 +63,12 @@
 					<td>{{userA}}</td>
 					<td>{{userB}}</td>
 					<td>{{state}}</td>
+					<td class="openChat" id="{{_id}}" style="cursor:pointer"><i class="fa fa-comments-o" id="{{_id}}" aria-hidden="true"></i></td>
+					<!--
+
+					<td class="createTransaction" id="{{_id}}" style="cursor:pointer"><i class="fa fa-handshake-o" id="{{_id}}" aria-hidden="true"></i></td>
+
+					-->
 				</tr>
 			{{/each}}
 		</tbody>

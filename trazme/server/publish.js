@@ -15,3 +15,7 @@ Meteor.publish('transactions', function(){
 Meteor.publish('transactions.single', function(id){
 	return Transactions.find({_id:id});
 });
+
+Meteor.publish('allUsers', function(){
+	return Mongo.Collection.get('users').find();
+});

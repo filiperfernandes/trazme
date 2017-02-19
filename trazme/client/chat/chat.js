@@ -22,7 +22,7 @@ Template.chat.helpers({
 
 	checkOwner: function(){
 		let id = FlowRouter.getParam('id');
-		return Meteor.userId() == Transactions.findOne({_id:id}).userB;
+		return Meteor.userId() == Transactions.findOne({_id:id}).userA;
 	},
 
 	isOpen: function(){

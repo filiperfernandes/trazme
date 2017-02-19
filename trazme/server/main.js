@@ -7,7 +7,7 @@ Meteor.startup(() => {
 
 Meteor.methods({
 
-	'transactions.insert'(type, orderId, userA, state){
+	'transactions.insert'(type, orderId, userA){
 
 		var info = "grsvfxc"; 
 
@@ -16,6 +16,7 @@ Meteor.methods({
 	      orderId: orderId,
 	      userA: userA,
 	      info: info,
+	      state: "open",
 	    });
 	}
 });

@@ -61,6 +61,13 @@ FlowRouter.route('/user/:id',{
 	}
 });
 
+FlowRouter.route('/user/:id/requests',{
+	name: 'user',
+	action(){
+		BlazeLayout.render('user',{main: 'pendingRequests'}); //Alterar Aqui
+	}
+});
+
 FlowRouter.route('/chat/:id',{
 	name: 'chat',
 	action(){

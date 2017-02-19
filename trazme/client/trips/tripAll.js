@@ -54,14 +54,28 @@ Template.tripAll.events({
 		Session.set("selDestination","");
 	},
 	"click .createTransaction": function(e, t){
+
 		let orderId = e.target.getAttribute("id") ;
-		Meteor.call('transactions.insert', "asdasd",orderId, "sdrfv", "LOL", function(err,response) {
-			if(err) {
-				console.log(err);
-				return;
-			}
-			Session.set('latestTransaction', response);
-		});
+		let uA = Trip.findOne({_id:orderId}).user;
+
+		if ( uA != Meteor.userId() )
+		{
+
+			Meteor.call('transactions.insert', "T", orderId, uA , function(err,response) {
+				if(err) {
+					console.log(err);
+					return;
+				}
+				Session.set('latestTransaction', response);
+				console.log(Session.get('latestTransaction'));
+			});
+			let chatId = Session.get('latestTransaction');
+			console.log(chatId);
+			FlowRouter.redirect('/chat/'+ chatId);
+
+		}
+		else
+			alert("Não pode aceitar as suas próprias propostas");
 	},
 
 });
