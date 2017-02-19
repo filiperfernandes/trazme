@@ -99,7 +99,7 @@ Template.user.events({
     },
 
     "click #inTransitOffers": function(){
-		FlowRouter.go('/user/' + Meteor.userId() + '/requests');
+		FlowRouter.go('/user/' + Meteor.userId() + '/transit');
     },
 
     "click #userSendMessage": function(){

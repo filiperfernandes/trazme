@@ -19,19 +19,29 @@
 	{{#if isOpen}}
 
 		<div class="row mx-0 my-3">
-			<div class="col-md-5 offset-md-1">
+			<div class="col-md-3 offset-md-1 py-3">
 				<ul class="list-group">
-					<li class="list-group-item">{{currTrans._id}}</li>
+					<li class="list-group-item">ID: {{currTrans._id}}</li>
+					<li class="list-group-item">Tipo: {{currTrans.type}}</li>
 					<li class="list-group-item">{{currTrip.origin}} -> {{currTrip.destination}} </li>
 					<li class="list-group-item">{{currTrip.data}}</li>
-					<li class="list-group-item">A viagem vai ser feita por @{{currTripUsername}}</li>
-					<li class="list-group-item">Vestibulum at eros</li>
 				</ul>
 			</div>
-			<div class="col-md-5">
-
+			<div class="col-md-7 mt-0 py-0">
+				{{>SimpleChatWindow roomId=getId username=username limit=limit}}
+				<div class="row my-2">
+					<div class="col-md-6 col-xs-12">
+						{{#if checkOwner}}
+							<button type="button" class="btn btn-success btn-block btn-close">Confirmar</button>
+						{{/if}}
+					</div>
+					<div class="col-md-6 col-xs-12">
+						<button type="button" class="btn btn-danger btn-block btn-close" id="cancelTransaction">Cancelar</button>
+					</div>
+				</div>
 			</div>
 		</div>
+
 
 	{{/if}}
 
