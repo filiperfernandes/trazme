@@ -1,5 +1,5 @@
 Template.chat.onRendered(function() {
-  GoogleMaps.load({key:"INSER YOUR GOOGLE API"});
+  GoogleMaps.load({key:"GAPIkey"});
 });
 
 

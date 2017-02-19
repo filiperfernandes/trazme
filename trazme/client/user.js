@@ -18,6 +18,37 @@ Template.user.helpers({
 		return Mongo.Collection.get('users').findOne({_id:Meteor.userId()}).profile.name ;
 	},
 
+	userPageName: function(){
+		var id = FlowRouter.getParam('id');
+		return Mongo.Collection.get('users').findOne({_id:id}).profile.name ;
+	},
+
+	userPageUsername: function(){
+		var id = FlowRouter.getParam('id');
+		return Mongo.Collection.get('users').findOne({_id:id}).username ;
+	},
+
+	userPageEmail: function(){
+		var id = FlowRouter.getParam('id');
+		return Mongo.Collection.get('users').findOne({_id:id}).emails[0].address ;
+	},	
+	userPagePhone: function(){
+		var id = FlowRouter.getParam('id');
+		return Mongo.Collection.get('users').findOne({_id:id}).profile.phone ;
+	},
+	userPageNIF: function(){
+		var id = FlowRouter.getParam('id');
+		return Mongo.Collection.get('users').findOne({_id:id}).profile.NIF ;
+	},
+	userPcode: function(){
+		var id = FlowRouter.getParam('id');
+		return Mongo.Collection.get('users').findOne({_id:id}).profile.pcode ;
+	},
+
+	checkUser: function(){
+		let id = FlowRouter.getParam('id');
+		return Mongo.Collection.get('users').findOne({_id:id})._id == Meteor.userId();
+	},
 });
 
 Template.pendingRequests.helpers({
@@ -116,6 +147,11 @@ Template.user.events({
 
     "click #inTransitOffers": function(){
 		FlowRouter.go('/user/' + Meteor.userId() + '/transit');
+    },
+
+    "click #userLogout": function(){
+    	Meteor.logout();
+		FlowRouter.go('/');
     },
 
     "click #userSendMessage": function(){

@@ -8,8 +8,8 @@
 				<tbody>
 					<tr>
 						<td class="align-middle text-center">
-							<h2 class="cw m-0">{{currentName}}</h2>
-							<p class="cw m-0">{{currentUsername}}</p>
+							<h2 class="cw m-0">{{userPageName}}</h2>
+							<p class="cw m-0">{{userPageUsername}}</p>
 						</td>
 					</tr>
 				</tbody>
@@ -23,18 +23,27 @@
 		<div class="col-md-3 offset-md-1">
 			<div class="list-group">
 				<ul class="list-group">
-					<li class="list-group-item">Dapibus ac facilisis in</li>
-					<li class="list-group-item">Morbi leo risus</li>
-					<li class="list-group-item">Porta ac consectetur ac</li>
-					<li class="list-group-item">Vestibulum at eros</li>
+					<li class="list-group-item">Nome de Utilizador: {{userPageUsername}}</li>
+					<li class="list-group-item">Nome: {{userPageName}}</li>
+					<li class="list-group-item">Email: {{userPageEmail}}</li>
+					<li class="list-group-item">Phone: {{userPagePhone}}</li>
+					<li class="list-group-item">NIF: {{userPageNIF}}</li>
+					<li class="list-group-item">Postal Code: {{userPageNIF}}</li>
 				</ul>
 			</div>
 			<hr>
 			<div class="list-group">
+				
 				<p id="userOffersMade" class="list-group-item list-group-item-action tweakOptions hvr-fade">Ofertas Feitas ( se user )</p>
+				
 				<p id="inTransitOffers" class="list-group-item list-group-item-action tweakOptions hvr-fade">Viagens/Encomendas a decorrer</p>
 				<p  id="userHistory" class="list-group-item list-group-item-action tweakOptions hvr-fade">Histórico de Viagens</p>
-				<p id="userSendMessage" class="list-group-item list-group-item-action tweakOptions hvr-fade">Enviar Mensagem</p>
+				
+				{{#if checkUser}}
+
+				<p id="userLogout" class="list-group-item list-group-item-action tweakOptions hvr-fade">Logout</p>
+
+				{{/if}}
 			</div>
 		</div>
 		<div class="col-md-7">
@@ -46,14 +55,14 @@
 
 </template>
 
+
 <template name="pendingRequests">
 
 	<table class="table table-striped">
 		<thead>
 			<tr>
 				<th>Tipo</th>
-				<th>User A</th>
-				<th>user B</th>
+				<th>User</th>
 				<th>Estado</th>
 			</tr>
 		</thead>
@@ -61,7 +70,6 @@
 			{{#each allRequests}}
 				<tr>
 					<th scope="row">{{type}}</th>
-					<td>{{userA}}</td>
 					<td>{{userB}}</td>
 					<td>{{state}}</td>
 					<td class="openChat" id="{{_id}}" style="cursor:pointer"><i class="fa fa-comments-o" id="{{_id}}" aria-hidden="true"></i></td>
@@ -76,6 +84,8 @@
 	</table>
 
 </template>
+
+
 
 <template name="pendingOffers">
 
