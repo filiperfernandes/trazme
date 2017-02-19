@@ -72,7 +72,7 @@ Template.acceptedTrips.helpers({
 		var id = FlowRouter.getParam('id');
 		//Ser do Tipo T, estado aceite e user que fez o serviço ser igual ao da página
 		return Transactions.find({
-			$and: [ { state: "T" } , { type: "accepted" } , { userA : Meteor.userId() } ]	
+			$and: [ { type: "T" } , { state: "accepted" } , { userA : Meteor.userId() } ]	
 		});
 	},
 	userA: function(){
