@@ -6,6 +6,8 @@ Template.itemAll.onCreated(function() {
 
 	self.autorun(function(){
 		self.subscribe('item');
+		self.subscribe('transactions');
+		self.subscribe('allUsers');
 		Session.set("selOrigin","");
 		Session.set("selDestination","");
 	});

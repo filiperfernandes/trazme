@@ -6,6 +6,7 @@ Template.chat.onCreated(function() {
 		//console.log(id);
 		self.subscribe('transactions');
 		self.subscribe('trip');
+		self.subscribe('item');
 		self.subscribe('allUsers');
 	});
 });

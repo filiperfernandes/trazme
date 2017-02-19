@@ -25,12 +25,15 @@
 					<li class="list-group-item">ID: {{currTrans._id}}</li>
 					<li class="list-group-item">Tipo: {{currTrans.type}}</li>
 					<li class="list-group-item">{{currTrip.origin}} -> {{currTrip.destination}} </li>
-					<li class="list-group-item">{{currTrip.data}}</li>
+					<li class="list-group-item">Data: {{currTrip.data}}</li>
 				</ul>
 				{{else}}
 					<li class="list-group-item">ID: {{currTrans._id}}</li>
 					<li class="list-group-item">Tipo: {{currTrans.type}}</li>
 					<li class="list-group-item">{{currItem.origin}} -> {{currItem.destination}} </li>
+					<li class="list-group-item">Data: {{currItem.data}}</li>
+					<li class="list-group-item">Preço: {{currItem.price}}</li>
+					<li class="list-group-item">Valor: {{currItem.value}}</li>
 				{{/if}}
 			</div>
 			<div class="col-md-7 mt-0 py-0">
