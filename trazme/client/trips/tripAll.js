@@ -69,11 +69,15 @@ Template.tripAll.events({
 					console.log(err);
 					return;
 				}
-				Session.set('latestTransaction', response);
-				console.log(Session.get('latestTransaction'));
+				else
+				{
+					Session.set('latestTransaction', response);
+				}
+				
+				//console.log(Session.get('latestTransaction'));
 			});
-			//let chatId = Session.get('latestTransaction');
-			let chatId = Transactions.findOne({}, {sort: {DateTime: -1, limit: 1}})._id;
+			let chatId = Session.get('latestTransaction');
+			//let chatId = Transactions.findOne({}, {sort: {DateTime: -1, limit: 1}})._id;
 			FlowRouter.redirect('/chat/'+ chatId);
 		}
 
