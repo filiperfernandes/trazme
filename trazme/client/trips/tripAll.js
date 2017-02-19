@@ -81,12 +81,12 @@ Template.tripAll.events({
 
 
 AutoForm.hooks({
-  insertTripForm: {
-    onSubmit: function () {
-      console.log("People doc with auto values");
+    insertTripForm: {
+        onSuccess: function(){
+            FlowRouter.go("/trip/all");
+        }
     }
-  }
-});
+})
 
 function distinct(collection, field) {
   return _.uniq(collection.find({}, {

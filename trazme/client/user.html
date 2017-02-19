@@ -34,15 +34,27 @@
 			<hr>
 			<div class="list-group">
 
-				<p  id="userHistory" class="list-group-item list-group-item-action tweakOptions hvr-fade">Histórico de Viagens</p>
+				<li  id="userHistory" class="list-group-item list-group-item-action tweakOptions hvr-fade">
+					<i class="fa fa-arrow-right mr-3" id="userHistoryIcon" aria-hidden="true" style="display:none;"></i>
+					<span>Histórico de Viagens</span>
+				</li>
 
 				{{#if checkUser}}
 				
-				<p id="userOffersMade" class="list-group-item list-group-item-action tweakOptions hvr-fade">Ofertas Pendentes</p>
+				<li  id="userOffersMade" class="list-group-item list-group-item-action tweakOptions hvr-fade">
+					<i class="fa fa-arrow-right mr-3" id="userOffersMadeIcon" aria-hidden="true" style="display:none;"></i>
+					<span>Ofertas Pendentes</span>
+				</li>
 				
-				<p id="inTransitOffers" class="list-group-item list-group-item-action tweakOptions hvr-fade">Viagens/Encomendas a decorrer</p>
+				<li  id="inTransitOffers" class="list-group-item list-group-item-action tweakOptions hvr-fade">
+					<i class="fa fa-arrow-right mr-3" id="inTransitOffersIcon" aria-hidden="true" style="display:none;"></i>
+					<span>Em trânsito</span>
+				</li>
 
-				<p id="userLogout" class="list-group-item list-group-item-action tweakOptions hvr-fade">Logout</p>
+				<li  id="userLogout" class="list-group-item list-group-item-action tweakOptions hvr-fade">
+					<i class="fa fa-arrow-right mr-3" aria-hidden="true" style="display:none;"></i>
+					<span>Logout</span>
+				</li>
 
 				{{/if}}
 			</div>
