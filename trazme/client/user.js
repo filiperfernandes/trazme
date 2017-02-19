@@ -11,6 +11,14 @@ Template.user.onCreated(function() {
 
 Template.user.helpers({
 
+	tripHistoryCount: function(){
+		var id = FlowRouter.getParam('id');
+		//Ser do Tipo T, estado fechado e user que fez o serviço ser igual ao da página
+		return Transactions.find({
+			$and: [ { state: "closed" } , { userA : Meteor.userId() } ]	
+		}).count();
+	},
+
 	currentUsername: function(){
 		return "@" + Mongo.Collection.get('users').findOne({_id:Meteor.userId()}).username ;
 	},
