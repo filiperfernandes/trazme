@@ -67,6 +67,22 @@ Template.finishedTrips.helpers({
 	},
 });
 
+Template.acceptedTrips.helpers({
+	tripHistory: function(){
+		var id = FlowRouter.getParam('id');
+		//Ser do Tipo T, estado aceite e user que fez o serviço ser igual ao da página
+		return Transactions.find({
+			$and: [ { state: "T" } , { type: "accepted" } , { userA : Meteor.userId() } ]	
+		});
+	},
+	userA: function(){
+		return Mongo.Collection.get('users').findOne({_id:this.userA}).username;
+	},
+	userB: function(){
+		return Mongo.Collection.get('users').findOne({_id:this.userB}).username;
+	},
+});
+
 
 
 Template.user.events({

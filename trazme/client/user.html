@@ -126,3 +126,29 @@
 	</table>
 
 </template>
+
+
+<template name="acceptedTrips">
+
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>Tipo</th>
+				<th>User A</th>
+				<th>user B</th>
+				<th>Estado</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{#each allRequests}}
+				<tr>
+					<th scope="row">{{type}}</th>
+					<td>{{userA}}</td>
+					<td>{{userB}}</td>
+					<td>{{state}}</td>
+				</tr>
+			{{/each}}
+		</tbody>
+	</table>
+
+</template>
