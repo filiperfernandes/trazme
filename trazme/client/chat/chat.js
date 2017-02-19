@@ -133,7 +133,7 @@ Template.chat.helpers({
 
 	checkType: function(){
 		let id = FlowRouter.getParam('id');
-		return Transactions.findOne({_id:id}).state == "T";
+		return Transactions.findOne({_id:id}).type == "T";
 	},
 
 	currTrans: function(){

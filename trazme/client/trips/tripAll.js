@@ -77,6 +77,9 @@ Template.tripAll.events({
 			});
 		}
 	},
+	"click .redirect-trip": function(e, t){
+		FlowRouter.go('/trip/all');
+	},
 });
 
 

@@ -19,7 +19,7 @@
   transition-property: color, background-color;
 }
 .hvr-fade:hover, .hvr-fade:focus, .hvr-fade:active {
-  background-color: #af0c0c !important;
+  background-color: #252839 !important;
   color: white !important;
   cursor: pointer;
 }

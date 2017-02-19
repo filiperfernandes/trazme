@@ -3,7 +3,7 @@
 	{{> navbar}}
 
 	<div class="row m-0">
-		<div class="col-md-12 col-xs-12 splash p-0 background-screen" id="back0" >
+		<div class="col-md-12 col-xs-12 splash-lg p-0 background-screen" id="back0" >
 			<!--
 			<img class="hidden-md-down" src="/facs.png" id="splash-img" style="opacity: 1"/>
 			<img class="hidden-lg-up" src="/facsCropped.png" id="splash-img-mobile" style="opacity: 1"/>
@@ -11,16 +11,17 @@
 		</div>
 	</div>
 
+	<div class="spacer"></div>
+
 	<div class="row mx-0 my-3">
-		<div class="col-md-6 col-xs-12 splash-col" >
-			<p>Viagens</p>
+		<div class="col-md-5 offset-md-1 col-xs-12" >
+			<h5 class="text-center">VIAGENS</h5>
 			<table class="table table-striped my-3 mx-0 text-center">
 				<thead>
 					<tr>
 						<th class="text-center">Origem</th>
 						<th class="text-center">Destino</th>
 						<th class="text-center">Data</th>
-						<th></th>
 					</tr>
 				</thead>
 				<tbody>
@@ -30,26 +31,30 @@
 							<td>{{origin}}</td>
 							<td>{{destination}}</td>
 							<td>{{data}}</td>
-							<td>Falar com este cona</td>
 						</tr>
 						{{/each}}
 					{{else}}
 						<tr>
-							<td colspan="4" class="text-center">Não há viagens disponíveis</td>
+							<td colspan="3" class="text-center">Não há viagens disponíveis</td>
 						</tr>
 					{{/if}}
 				</tbody>
 			</table>
+
+			<div class="text-center">
+				<a href="/trip/add" class="btn btn-secondary btn-lg hvr-fade" role="button" aria-pressed="true">Adicionar Viagem</a>
+			</div>
+
 		</div>
-		<div class="col-md-6 col-xs-12 splash-col">
-			<p>Viagens</p>
+		<div class="col-md-5 col-xs-12">
+			<h5 class="text-center">ENCOMENDAS</h5>
 			<table class="table table-striped my-3 mx-0 text-center">
 				<thead>
 					<tr>
 						<th class="text-center">Origem</th>
 						<th class="text-center">Destino</th>
 						<th class="text-center">Data</th>
-						<th></th>
+						<th class="text-center">Preço</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -59,7 +64,7 @@
 							<td>{{origin}}</td>
 							<td>{{destination}}</td>
 							<td>{{data}}</td>
-							<td>Falar com este cona</td>
+							<td>{{price}}</td>
 						</tr>
 						{{/each}}
 					{{else}}
@@ -69,6 +74,9 @@
 					{{/if}}
 				</tbody>
 			</table>
+			<div class="text-center">
+				<a href="/trip/add" class="btn btn-secondary btn-lg hvr-fade" role="button" aria-pressed="true">Adicionar Viagem</a>
+			</div>
 		</div>
 	</div>
 

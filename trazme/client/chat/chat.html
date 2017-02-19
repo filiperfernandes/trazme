@@ -19,7 +19,23 @@
 	{{#if isOpen}}
 
 		<div class="row mx-0 my-3">
-			<div class="col-md-3 offset-md-1 py-3">
+			<div class="col-md-10 offset-md-1 mt-0 py-0" >
+				{{>SimpleChatWindow roomId=getId username=username limit=limit}}
+				<div class="row my-2">
+					<div class="col-md-6 col-xs-12">
+						{{#if checkOwner}}
+							<button type="button" class="btn btn-success btn-block btn-close" id="confirmTransaction">Confirmar</button>
+						{{/if}}
+					</div>
+					<div class="col-md-6 col-xs-12">
+						<button type="button" class="btn btn-danger btn-block btn-close" id="cancelTransaction">Cancelar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row mx-0 my-3">
+			<div class="col-md-3 offset-md-1 col-xs-12">
 				{{#if checkType}}
 				<ul class="list-group">
 					<li class="list-group-item">ID: {{currTrans._id}}</li>
@@ -36,23 +52,7 @@
 					<li class="list-group-item">Valor: {{currItem.value}}</li>
 				{{/if}}
 			</div>
-			<div class="col-md-7 mt-0 py-0">
-				{{>SimpleChatWindow roomId=getId username=username limit=limit}}
-				<div class="row my-2">
-					<div class="col-md-6 col-xs-12">
-						{{#if checkOwner}}
-							<button type="button" class="btn btn-success btn-block btn-close" id="confirmTransaction">Confirmar</button>
-						{{/if}}
-					</div>
-					<div class="col-md-6 col-xs-12">
-						<button type="button" class="btn btn-danger btn-block btn-close" id="cancelTransaction">Cancelar</button>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="row mx-0 my-3">
-			<div class="col-md-10 offset-md-1 col-xs-12">
+			<div class="col-md-7 col-xs-12">
 			  
 			  <div class="map-container mx-auto">
     			{{> googleMap name="lxMap" options=exampleMapOptions}}

@@ -18,8 +18,8 @@
 
 	<div class="row mx-0 my-3 text-center">
 		<div class="col-md-3 offset-md-3">
-			<div class="dropdown">
-				<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			<div class="dropdown my-1">
+				<button class="btn btn-secondary dropdown-toggle btn-block" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				Origem: {{selOr}}
 				</button>
 				<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -32,8 +32,8 @@
 			</div>
 		</div>
 		<div class="col-md-3">
-			<div class="dropdown">
-				<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			<div class="dropdown my-1">
+				<button class="btn btn-secondary dropdown-toggle btn-block" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				Destino: {{selDest}}
 				</button>
 				<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -52,10 +52,10 @@
 			<table class="table table-striped">
 				<thead>
 					<tr>
-						<th>Utilizador</th>
 						<th>Origem</th>
 						<th>Destino</th>
 						<th>Data</th>
+						<th>Preço (€)</th>
 						<th></th>
 					</tr>
 				</thead>
@@ -63,10 +63,10 @@
 					{{#if allItems.count}}
 						{{#each allItems}}
 						<tr>
-							<th scope="row">{{us}}</th>
 							<td>{{origin}}</td>
 							<td>{{destination}}</td>
 							<td>{{data}}</td>
+							<td>{{price}}</td>
 							<td class="createTransaction" id="{{_id}}" style="cursor:pointer"><i class="fa fa-handshake-o" id="{{_id}}" aria-hidden="true"></i></td>
 						</tr>
 						{{/each}}
@@ -77,6 +77,12 @@
 					{{/if}}
 				</tbody>
 			</table>
+		</div>
+	</div>
+
+	<div class="row mx-0 my-3">
+		<div class="col-md-6 offset-md-3">
+			<a href="/item/add" class="btn btn-secondary btn-lg btn-block hvr-fade" role="button" aria-pressed="true">Adicionar Encomenda</a>
 		</div>
 	</div>
 

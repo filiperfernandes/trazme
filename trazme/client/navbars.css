@@ -1,4 +1,4 @@
-nav.navbar-findcond {background: #af0c0c; border-bottom: 1px solid #ffffff }
+nav.navbar-findcond {background: #252839; border-bottom: 1px solid #ffffff }
 nav.navbar-findcond a {color: #ffffff; text-decoration: none;}
 nav.navbar-findcond li {color: #ffffff; text-decoration: none;}
 nav.navbar-findcond li :hover,
@@ -14,8 +14,8 @@ nav.navbar-findcond li :hover {}
   cursor: pointer;
 }
 
-.jacobRedButton {
-  background: #af0c0c;
+.jacobBlueButton {
+  background: #252839;
   margin-top: 0.4em;
   padding: 0.5em 0.7em 0.5em 0.7em;
   border-color: white !important;
@@ -37,8 +37,8 @@ nav.navbar-findcond li :hover {}
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px transparent;
   position: relative;
-  background: #af0c0c;
-  color: #af0c0c;
+  background: #252839;
+  color: #252839;
   -webkit-transition-property: color, background;
   transition-property: color, background;
   -webkit-transition-duration: 0.3s;
@@ -66,8 +66,8 @@ nav.navbar-findcond li :hover {}
   transition-timing-function: ease-out;
 }
 .hvr-shutter-out-horizontal:hover, .hvr-shutter-out-horizontal:focus, .hvr-shutter-out-horizontal:active {
-  color: #af0c0c;
-  background: #af0c0c;
+  color: #252839;
+  background: #252839;
 
   }
 .hvr-shutter-out-horizontal:hover:before, .hvr-shutter-out-horizontal:focus:before, .hvr-shutter-out-horizontal:active:before {

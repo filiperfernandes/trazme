@@ -77,6 +77,9 @@ Template.itemAll.events({
 			});
 		}
 	},
+	"click .redirect-item": function(e, t){
+		FlowRouter.go('/item/all');
+	},
 });
 
 

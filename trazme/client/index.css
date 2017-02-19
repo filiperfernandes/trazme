@@ -7,7 +7,7 @@
 #back0
 {
     background-image: url("/back0.jpg");
-    background-image: linear-gradient(to bottom, rgba(175,12,12,0.6) 0%,rgba(175,12,12,0.6) 100%), url("/back0.jpg");
+    background-image: linear-gradient(to bottom, rgba(242, 182, 50,0.6) 0%,rgba(242, 182, 50,0.6) 100%), url("/back0.jpg");
 }
 
 .splash
@@ -22,7 +22,7 @@
 {
     position: relative;
     display: inline ;
-    height: 100vh;
+    height: 35vh;
     width: 100% ;
 }
 
@@ -59,3 +59,5 @@
     width: 100% ;
     opacity: 0.5 ;
 }
+
+.spacer { height: 30px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
