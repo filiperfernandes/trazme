@@ -7,6 +7,7 @@ Template.tripAll.onCreated(function() {
 	self.autorun(function(){
 		self.subscribe('trip');
 		self.subscribe('transactions');
+		self.subscribe('allUsers');
 		Session.set("selOrigin","");
 		Session.set("selDestination","");
 	});
@@ -34,6 +35,9 @@ Template.tripAll.helpers({
 	},
 	selDest: function(){
 		return Session.get("selDestination");
+	},
+	us: function(){
+		return Mongo.Collection.get('users').findOne({_id:this.user}).username;
 	},
 
 });
