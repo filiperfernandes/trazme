@@ -77,11 +77,16 @@ Template.tripAll.events({
 			});
 		}
 	},
-	"click .redirect-trip": function(e, t){
-		FlowRouter.go('/trip/all');
-	},
 });
 
+
+AutoForm.hooks({
+  insertTripForm: {
+    onSubmit: function () {
+      console.log("People doc with auto values");
+    }
+  }
+});
 
 function distinct(collection, field) {
   return _.uniq(collection.find({}, {

@@ -11,10 +11,10 @@ Template.index.onCreated(function() {
 
 Template.index.helpers({
 	shortTrips: function(){
-		return Trip.find({}, {limit: 5});
+		return Trip.find({}, {limit: 3});
 	},
 	shortItems: function(){
-		return Item.find({}, {limit: 5});
+		return Item.find({}, {limit: 3});
 	},
 
 });
