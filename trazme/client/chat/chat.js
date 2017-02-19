@@ -75,7 +75,12 @@ Template.chat.events({
 	"click #confirmTransaction": function(e,t){
 		let id = FlowRouter.getParam('id');
 		Transactions.update({_id:id},{$set:{state:"accepted"}});
+		let tripId = Transactions.findOne({_id:id}).orderId;
+		console.log(Transactions.findOne({_id:id}));
+		Trip.remove({_id:tripId});
+
 		FlowRouter.go('/login');
+
 	},
 
 });

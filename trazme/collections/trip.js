@@ -5,6 +5,9 @@ Trip = new Mongo.Collection('trip');
 Trip.allow({
 	insert: function(){
 		return true;
+	},
+	remove: function(){
+		return true;
 	}
 });
 

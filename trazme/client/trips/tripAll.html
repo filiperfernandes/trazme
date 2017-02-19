@@ -19,7 +19,7 @@
 	<div class="row mx-0 my-3 text-center">
 		<div class="col-md-3 offset-md-3">
 			<div class="dropdown">
-				<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<button class="btn btn-secondary dropdown-toggle btn-block" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				Origem: {{selOr}}
 				</button>
 				<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -33,7 +33,7 @@
 		</div>
 		<div class="col-md-3">
 			<div class="dropdown">
-				<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<button class="btn btn-secondary dropdown-toggle btn-block" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				Destino: {{selDest}}
 				</button>
 				<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -77,6 +77,14 @@
 					{{/if}}
 				</tbody>
 			</table>
+		</div>
+	</div>
+
+	<hr>
+
+	<div class="row mx-0 my-3">
+		<div class="col-md-6 offset-md-3">
+			<a href="/trip/add" class="btn btn-secondary btn-lg btn-block hvr-fade" role="button" aria-pressed="true">Adicionar Viagem</a>
 		</div>
 	</div>
 
