@@ -10,6 +10,9 @@ Template.chat.onCreated(function() {
 	});
 });
 
+Template.chatReroute.onCreated(function(){
+	FlowRouter.go('/chat/'+Session.get('latestTransaction'));
+});
 
 
 Template.chat.helpers({
@@ -76,6 +79,7 @@ Template.chat.events({
 	"click #confirmTransaction": function(e,t){
 		let id = FlowRouter.getParam('id');
 		Transactions.update({_id:id},{$set:{state:"accepted"}});
+		FlowRouter.go('/login');
 	},
 
 });
