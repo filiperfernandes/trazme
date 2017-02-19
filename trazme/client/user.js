@@ -56,7 +56,7 @@ Template.pendingRequests.helpers({
 		var id = FlowRouter.getParam('id');
 		//Ser do Tipo T, estado pendente e user que vai fazer serviço ser igual ao da página
 		return Transactions.find({
-			$and: [ { type: "T" } , { state:"open" } , { userA : Meteor.userId() } ]	
+			$and: [ { state:"open" } , { userA : Meteor.userId() } ]	
 		});
 	},
 	userA: function(){

@@ -11,6 +11,7 @@ Template.chat.onCreated(function() {
 		//console.log(id);
 		self.subscribe('transactions');
 		self.subscribe('trip');
+		self.subscribe('item');
 		self.subscribe('allUsers');
 	});
 
@@ -130,6 +131,11 @@ Template.chat.helpers({
 		return Transactions.findOne({_id:id}).state == "open";
 	},
 
+	checkType: function(){
+		let id = FlowRouter.getParam('id');
+		return Transactions.findOne({_id:id}).state == "T";
+	},
+
 	currTrans: function(){
 		let id = FlowRouter.getParam('id');
 		return Transactions.findOne({_id:id});	
@@ -139,6 +145,12 @@ Template.chat.helpers({
 		let id = FlowRouter.getParam('id');
 		let oId = Transactions.findOne({_id:id}).orderId ;
 		return Trip.findOne({_id: oId });	
+	},
+
+	currItem: function(){
+		let id = FlowRouter.getParam('id');
+		let oId = Transactions.findOne({_id:id}).orderId ;
+		return Item.findOne({_id: oId });	
 	},
 
 	currTripUsername: function(){
