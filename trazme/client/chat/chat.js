@@ -59,7 +59,7 @@ Template.chat.events({
 		let id = FlowRouter.getParam('id');
 		//Transactions.findOne({_id:id}).state = "closed";
 		Transactions.update({_id:id},{$set:{state:"closed"}});
-		console.log( Transactions.findOne({_id:id}).state );
+		//console.log( Transactions.findOne({_id:id}).state );
 		//db.trip.update({_id:"8ZYyFjnS4RYdDW49z"},{$set :{origin:"LIIIIISBOA"}})
 	},
 
@@ -75,6 +75,7 @@ Template.chat.events({
 
 	"click #confirmTransaction": function(e,t){
 		let id = FlowRouter.getParam('id');
+		Transactions.update({_id:id},{$set:{state:"accepted"}});
 	},
 
 });

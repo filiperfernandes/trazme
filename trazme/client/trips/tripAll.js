@@ -72,8 +72,8 @@ Template.tripAll.events({
 				Session.set('latestTransaction', response);
 				console.log(Session.get('latestTransaction'));
 			});
-			let chatId = Session.get('latestTransaction');
-			console.log(chatId);
+			//let chatId = Session.get('latestTransaction');
+			let chatId = Transactions.findOne({}, {sort: {DateTime: -1, limit: 1}})._id;
 			FlowRouter.redirect('/chat/'+ chatId);
 		}
 

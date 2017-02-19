@@ -42,49 +42,22 @@
 			</div>
 		</div>
 
-
-	{{/if}}
-
-	<!--
-
-	{{#if isOpen}}
-
 		<div class="row mx-0 my-3">
-			<div class="col-md-10 offset-md-1">
-				{{>SimpleChatWindow roomId=getId username=username limit=limit}}
+			<div class="col-md-10 offset-md-1 col-xs-12">
+				MAPA
 			</div>
 		</div>
-
-		<div class="row mx-0 my-3">
-			<div class="col-md-5 offset-md-1">
-				<button type="button" class="btn btn-danger btn-block btn-close" id="cancelTransaction">Cancelar</button>
-			</div>
-			<div class="col-md-5">
-				{{#if checkOwner}}
-					<button type="button" class="btn btn-success btn-block btn-close">Confirmar</button>
-				{{/if}}
-			</div>
-		</div>	
 
 	{{else}}
 
 		<div class="row mx-0 my-3">
 			<div class="col-md-10 offset-md-1 text-center">
-				<h4>Oferta cancelada</h4>
+				<h4>A proposta foi retirada</h4>
+				<hr>
+				<a class="btn btn-secondary" href="/login" role="button">Voltar ao perfil de utilizador</a>
 			</div>
 		</div>
 
 	{{/if}}
-
-	<div class="row mx-0 my-3">
-		<div class="col-md-5 offset-md-1">
-			TEXTO
-		</div>
-		<div class="col-md-5">
-			MAPA
-		</div>
-	</div>
-
-	-->
 
 </template>
