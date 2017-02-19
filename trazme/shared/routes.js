@@ -75,6 +75,13 @@ FlowRouter.route('/user/:id/transit',{
 	}
 });
 
+FlowRouter.route('/user/:id/history',{
+	name: 'user',
+	action(){
+		BlazeLayout.render('user',{main: 'finishedTrips'}); //Alterar Aqui
+	}
+});
+
 
 FlowRouter.route('/chat/:id',{
 	name: 'chat',

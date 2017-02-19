@@ -83,16 +83,20 @@ Template.acceptedTrips.helpers({
 	},
 });
 
+Template.acceptedTrips.events({
+	"click .closeTransaction": function(e,t){
+		let orderId = e.target.getAttribute("id") ;
+		Transactions.update({_id:orderId},{$set:{state:"closed"}});
+		FlowRouter.go('/login');
+	},
+});
 
 
 Template.user.events({
 
 	"click #userHistory": function(){
-
-	FlowRouter.go('/signin');
-    $('html, body').animate({
-    }, 0); 
-  },
+		FlowRouter.go('/user/' + Meteor.userId() + '/history');
+  	},
 
   	"click #userOffersMade": function(){
 		FlowRouter.go('/user/' + Meteor.userId() + '/requests');

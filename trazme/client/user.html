@@ -114,7 +114,7 @@
 			</tr>
 		</thead>
 		<tbody>
-			{{#each allRequests}}
+			{{#each tripHistory}}
 				<tr>
 					<th scope="row">{{type}}</th>
 					<td>{{userA}}</td>
@@ -137,6 +137,7 @@
 				<th>User A</th>
 				<th>user B</th>
 				<th>Estado</th>
+				<th></th>
 			</tr>
 		</thead>
 		<tbody>
@@ -146,6 +147,7 @@
 					<td>{{userA}}</td>
 					<td>{{userB}}</td>
 					<td>{{state}}</td>
+					<td class="closeTransaction" id="{{_id}}" style="cursor:pointer"><i class="fa fa-check-square-o " id="{{_id}}" aria-hidden="true"></i></td>
 				</tr>
 			{{/each}}
 		</tbody>
