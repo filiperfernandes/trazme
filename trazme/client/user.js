@@ -52,8 +52,14 @@ Template.pendingOffers.helpers({
 		var id = FlowRouter.getParam('id');
 		//Ser do Tipo P, estado pendente e user que fez a oferta ser igual ao da página
 		return Transactions.find({
-			$and: [ { state: true } , { type: true } , { userA : true } ]	
+			$and: [ { type: "P" } , { state: "open" } , { userA : Meteor.userId() } ]
 		});
+	},
+	userA: function(){
+		return Mongo.Collection.get('users').findOne({_id:this.userA}).username;
+	},
+	userB: function(){
+		return Mongo.Collection.get('users').findOne({_id:this.userB}).username;
 	},
 });
 
@@ -62,13 +68,19 @@ Template.finishedTrips.helpers({
 		var id = FlowRouter.getParam('id');
 		//Ser do Tipo T, estado fechado e user que fez o serviço ser igual ao da página
 		return Transactions.find({
-			$and: [ { state: true } , { type: true } , { userA : true } ]	
+			$and: [ { type: "T" } , { state: "closed" } , { userA : Meteor.userId() } ]	
 		});
+	},
+	userA: function(){
+		return Mongo.Collection.get('users').findOne({_id:this.userA}).username;
+	},
+	userB: function(){
+		return Mongo.Collection.get('users').findOne({_id:this.userB}).username;
 	},
 });
 
 Template.acceptedTrips.helpers({
-	tripHistory: function(){
+	tripAccepted: function(){
 		var id = FlowRouter.getParam('id');
 		//Ser do Tipo T, estado aceite e user que fez o serviço ser igual ao da página
 		return Transactions.find({
@@ -83,16 +95,20 @@ Template.acceptedTrips.helpers({
 	},
 });
 
+Template.acceptedTrips.events({
+	"click .closeTransaction": function(e,t){
+		let orderId = e.target.getAttribute("id") ;
+		Transactions.update({_id:orderId},{$set:{state:"closed"}});
+		FlowRouter.go('/login');
+	},
+});
 
 
 Template.user.events({
 
 	"click #userHistory": function(){
-
-	FlowRouter.go('/signin');
-    $('html, body').animate({
-    }, 0); 
-  },
+		FlowRouter.go('/user/' + Meteor.userId() + '/history');
+  	},
 
   	"click #userOffersMade": function(){
 		FlowRouter.go('/user/' + Meteor.userId() + '/requests');
