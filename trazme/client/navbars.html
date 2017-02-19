@@ -14,8 +14,12 @@
         <li id="navbarSeeTrip" class="nav-item hvr-shutter-out-horizontal p-3">
           Ver Viagens
         </li>
-        <li  id="navbarSignIn" class="nav-item hvr-shutter-out-horizontal p-3">
-          Sign In
+        <li id="navbarSignIn" class="nav-item hvr-shutter-out-horizontal p-3">
+          {{#if isLogged}}
+            {{getUsername}}
+          {{else}}
+            Sign Up
+          {{/if}}
         </li>
       </ul>
     </div>

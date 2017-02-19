@@ -19,57 +19,6 @@ Template.index.helpers({
 
 });
 
-Template.navbar.events({
 
-"click #navbarSeeTrip": function(){
-	FlowRouter.go('/trip/all');
-    $('html, body').animate({
-    }, 0);
-  },
-
-"click #navbarSeeItem": function(){
-	FlowRouter.go('/item/all');
-    $('html, body').animate({
-    }, 0); 
-  },
-
-"click #navbarTrazMe": function(){
-	FlowRouter.go('/');
-    $('html, body').animate({
-    }, 0); 
-  },
-
-"click #navbarSignIn": function(){
-	/* FALTA POR A PAGINA DE SING IN*/
-	FlowRouter.go('/signin');
-    $('html, body').animate({
-    }, 0); 
-  },
-
-});
-
-Template.user.events({
-
-	"click #userHistory": function(){
-
-	FlowRouter.go('/signin');
-    $('html, body').animate({
-    }, 0); 
-  },
-
-  	"click #userOfersMade": function(){
-	FlowRouter.go('/signin');
-    $('html, body').animate({
-    }, 0); 
-    },
-
-    "click #userSendMessage": function(){
-	FlowRouter.go('/signin');
-    $('html, body').animate({
-    }, 0); 
-  },
-
-
-});
 
 

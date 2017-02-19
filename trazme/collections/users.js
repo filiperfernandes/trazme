@@ -1,7 +1,6 @@
 // import { Meteor } from 'meteor/meteor';
 // import { AccountsTemplates } from 'meteor/accounts-base';
 
-
 var pwd = AccountsTemplates.removeField('password');
 AccountsTemplates.removeField('email');
 AccountsTemplates.addFields([

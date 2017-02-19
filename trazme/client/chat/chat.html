@@ -8,7 +8,7 @@
 				<tbody>
 					<tr>
 						<td class="align-middle text-center">
-							<h2 class="cw m-0">Encomendas</h2>
+							<h2 class="cw m-0">Mensagens</h2>
 						</td>
 					</tr>
 				</tbody>
@@ -19,27 +19,44 @@
 	{{#if isOpen}}
 
 		<div class="row mx-0 my-3">
-			<div class="col-md-10 offset-md-1">
+			<div class="col-md-3 offset-md-1 py-3">
+				<ul class="list-group">
+					<li class="list-group-item">ID: {{currTrans._id}}</li>
+					<li class="list-group-item">Tipo: {{currTrans.type}}</li>
+					<li class="list-group-item">{{currTrip.origin}} -> {{currTrip.destination}} </li>
+					<li class="list-group-item">{{currTrip.data}}</li>
+				</ul>
+			</div>
+			<div class="col-md-7 mt-0 py-0">
 				{{>SimpleChatWindow roomId=getId username=username limit=limit}}
+				<div class="row my-2">
+					<div class="col-md-6 col-xs-12">
+						{{#if checkOwner}}
+							<button type="button" class="btn btn-success btn-block btn-close" id="confirmTransaction">Confirmar</button>
+						{{/if}}
+					</div>
+					<div class="col-md-6 col-xs-12">
+						<button type="button" class="btn btn-danger btn-block btn-close" id="cancelTransaction">Cancelar</button>
+					</div>
+				</div>
 			</div>
 		</div>
 
 		<div class="row mx-0 my-3">
-			<div class="col-md-5 offset-md-1">
-				<button type="button" class="btn btn-danger btn-block btn-close">Cancelar</button>
+			<div class="col-md-10 offset-md-1 col-xs-12">
+				MAPA
 			</div>
-			<div class="col-md-5">
-				{{#if checkOwner}}
-					<button type="button" class="btn btn-success btn-block btn-close">Confirmar</button>
-				{{else}}
-					<button type="button" class="btn btn-success disabled btn-block">Confirmar</button>
-				{{/if}}
-			</div>
-		</div>	
+		</div>
 
 	{{else}}
 
-		<p> Chat terminado </p>
+		<div class="row mx-0 my-3">
+			<div class="col-md-10 offset-md-1 text-center">
+				<h4>A proposta foi retirada</h4>
+				<hr>
+				<a class="btn btn-secondary" href="/login" role="button">Voltar ao perfil de utilizador</a>
+			</div>
+		</div>
 
 	{{/if}}
 
