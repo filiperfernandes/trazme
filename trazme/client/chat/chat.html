@@ -20,12 +20,18 @@
 
 		<div class="row mx-0 my-3">
 			<div class="col-md-3 offset-md-1 py-3">
+				{{#if checkType}}
 				<ul class="list-group">
 					<li class="list-group-item">ID: {{currTrans._id}}</li>
 					<li class="list-group-item">Tipo: {{currTrans.type}}</li>
 					<li class="list-group-item">{{currTrip.origin}} -> {{currTrip.destination}} </li>
 					<li class="list-group-item">{{currTrip.data}}</li>
 				</ul>
+				{{else}}
+					<li class="list-group-item">ID: {{currTrans._id}}</li>
+					<li class="list-group-item">Tipo: {{currTrans.type}}</li>
+					<li class="list-group-item">{{currItem.origin}} -> {{currItem.destination}} </li>
+				{{/if}}
 			</div>
 			<div class="col-md-7 mt-0 py-0">
 				{{>SimpleChatWindow roomId=getId username=username limit=limit}}

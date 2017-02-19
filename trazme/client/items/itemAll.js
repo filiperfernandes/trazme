@@ -34,6 +34,9 @@ Template.itemAll.helpers({
 	selDest: function(){
 		return Session.get("selDestination");
 	},
+	us: function(){
+		return Mongo.Collection.get('users').findOne({_id:this.user}).username;
+	},
 
 });
 
