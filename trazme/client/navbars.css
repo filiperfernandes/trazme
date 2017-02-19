@@ -8,6 +8,29 @@ nav.navbar-findcond li :active {}
 nav.navbar-findcond li :hover {}
 
 
+
+/* JACOB  ISTO È O CURSOR OVER LOGO*/
+.cursorOverLogo{
+  cursor: pointer;
+}
+
+.jacobRedButton {
+  background: #af0c0c;
+  margin-top: 0.4em;
+  padding: 0.5em 0.7em 0.5em 0.7em;
+  border-color: white !important;
+}
+
+.fa-bars{
+  color: #ffffff !important;
+  size: 200%
+}
+
+
+
+
+
+
 .hvr-shutter-out-horizontal{
   //display: inline-block;
   vertical-align: middle;
@@ -55,7 +78,3 @@ nav.navbar-findcond li :hover {}
 }
 
 
-/* JACOB  ISTO È O CURSOR OVER LOGO*/
-.cursorOverLogo{
-  cursor: pointer;
-}
