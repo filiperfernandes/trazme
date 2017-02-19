@@ -64,7 +64,7 @@ Template.tripAll.events({
 		}
 		else
 		{
-			Meteor.call('transactions.insert', "T", orderId, uA , function(err,response) {
+			Meteor.call('transactions.insert', "T", orderId, uA , Meteor.userId() , function(err,response) {
 				if(err) {
 					console.log(err);
 					return;
