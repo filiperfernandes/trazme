@@ -36,9 +36,6 @@ TransactionSchema = new SimpleSchema({
 	userB: {
 		type: String,
 		label: "userB",
-		autoValue: function() {
-			return this.userId
-		},
 	},
 
 	createdAt: {

@@ -10,10 +10,6 @@ Template.chat.onCreated(function() {
 	});
 });
 
-Template.chatReroute.onCreated(function(){
-	FlowRouter.go('/chat/'+Session.get('latestTransaction'));
-});
-
 
 Template.chat.helpers({
 
