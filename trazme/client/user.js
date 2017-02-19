@@ -82,6 +82,10 @@ Template.user.events({
 		FlowRouter.go('/user/' + Meteor.userId() + '/requests');
     },
 
+    "click #inTransitOffers": function(){
+		FlowRouter.go('/user/' + Meteor.userId() + '/requests');
+    },
+
     "click #userSendMessage": function(){
 	FlowRouter.go('/signin');
     $('html, body').animate({

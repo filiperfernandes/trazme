@@ -68,6 +68,14 @@ FlowRouter.route('/user/:id/requests',{
 	}
 });
 
+FlowRouter.route('/user/:id/transit',{
+	name: 'user',
+	action(){
+		BlazeLayout.render('user',{main: 'acceptedTrips'}); //Alterar Aqui
+	}
+});
+
+
 FlowRouter.route('/chat/:id',{
 	name: 'chat',
 	action(){
