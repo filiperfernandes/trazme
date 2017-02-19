@@ -68,7 +68,7 @@ Template.finishedTrips.helpers({
 		var id = FlowRouter.getParam('id');
 		//Ser do Tipo T, estado fechado e user que fez o serviço ser igual ao da página
 		return Transactions.find({
-			$and: [ { type: "T" } , { type: "closed" } , { userA : Meteor.userId() } ]	
+			$and: [ { type: "T" } , { state: "closed" } , { userA : Meteor.userId() } ]	
 		});
 	},
 	userA: function(){
@@ -80,7 +80,7 @@ Template.finishedTrips.helpers({
 });
 
 Template.acceptedTrips.helpers({
-	tripHistory: function(){
+	tripAccepted: function(){
 		var id = FlowRouter.getParam('id');
 		//Ser do Tipo T, estado aceite e user que fez o serviço ser igual ao da página
 		return Transactions.find({
