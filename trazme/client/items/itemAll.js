@@ -52,6 +52,26 @@ Template.itemAll.events({
 	"click .destReset": function(e, t){
 		Session.set("selDestination","");
 	},
+	"click .createTransaction": function(e, t){
+
+		let orderId = e.target.getAttribute("id") ;
+		let uA = Item.findOne({_id:orderId}).user;
+
+		if ( uA == Meteor.userId() )
+		{
+			alert("Não pode aceitar as suas próprias propostas");
+		}
+		else
+		{
+			Meteor.call('transactions.insert', "P", orderId, uA , Meteor.userId() , function(err,response) {
+				if(err) {
+					console.log(err);
+					return;
+				}
+				FlowRouter.redirect('/chat/'+ response);
+			});
+		}
+	},
 });
 
 
