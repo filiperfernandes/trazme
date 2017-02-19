@@ -41,8 +41,11 @@
 				</tbody>
 			</table>
 
-			<div class="text-center">
+			<div class="text-center hidden-md-down">
 				<a href="/trip/all" class="btn btn-secondary btn-lg hvr-fade" role="button" aria-pressed="true">Ver todas as Viagens que vão ser feitas</a>
+			</div>
+			<div class="text-center hidden-lg-up ">
+				<a href="/trip/all" class="btn btn-secondary btn-lg hvr-fade" role="button" aria-pressed="true">Ver todas as Viagens</a>
 			</div>
 
 		</div>
@@ -74,14 +77,19 @@
 					{{/if}}
 				</tbody>
 			</table>
-			<div class="text-center">
-				<a href="/item/all" class="btn btn-secondary btn-lg hvr-fade" role="button" aria-pressed="true">Ver todas as Encomendas para serem levadas</a>
+			<div class="text-center hidden-md-down">
+				<a href="/item/all" class="btn btn-secondary btn-lg hvr-fade " role="button" aria-pressed="true">Ver todas as Encomendas para serem levadas</a>
+			</div>
+			<div class="text-center hidden-lg-up ">
+				<a href="/item/all" class="btn btn-secondary btn-lg hvr-fade " role="button" aria-pressed="true">Ver todas as Encomendas</a>
 			</div>
 		</div>
 	</div>
 
 	<div class="row m-0">
-		<p>Mais info</p>
+		<div class="col-md-12 col-xs-12">
+			<p class="text-center">TrazMe 2017</p>
+		</div>
 	</div>
 
 </template>
