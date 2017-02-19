@@ -28,8 +28,15 @@ Template.chat.onCreated(function() {
 
     var id = FlowRouter.getParam('id');
     let oId = Transactions.findOne({_id:id}).orderId ;
-    var torigin = Trip.findOne({_id:oId}).origin;
-    var tdestination = Trip.findOne({_id:oId}).destination;
+    if (Trip.findOne({_id:oId}) === undefined || Trip.findOne({_id:oId}) === null){
+    	var torigin = Item.findOne({_id:oId}).origin;
+    	var tdestination = Item.findOne({_id:oId}).destination;
+    }
+    else{
+    	var torigin = Trip.findOne({_id:oId}).origin;
+    	var tdestination = Trip.findOne({_id:oId}).destination;
+    }
+    
 
     var origin;
     var destination;
